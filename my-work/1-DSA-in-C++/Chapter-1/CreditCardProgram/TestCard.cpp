@@ -19,14 +19,14 @@ void testCard() {
   }
 
   cout << "Card payments:\n";
-  for (int j = 0; j < 3; j++) {
-    cout << *wallet[j];
-    while (wallet[j]->getBalance() > 100) {
-      wallet[j]->makePayment(100);
-      cout << "New balance: " << wallet[j]->getBalance() << "\n";
+  for (int i = 0; i < 3; i++) {
+    cout << *wallet[i];
+    while (wallet[i]->getBalance() > 100) {
+      wallet[i]->makePayment(100);
+      cout << "New balance: " << wallet[i]->getBalance() << "\n";
     }
     cout << "\n";
-    delete wallet[j];
+    delete wallet[i];
   }
 }
 
