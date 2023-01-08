@@ -4,16 +4,16 @@
 
 using namespace std;
 
-CreditCard::CreditCard(const string &num, const string &nm, int limit,
+CreditCard::CreditCard(const string &number, const string &name, int limit,
                        double balance) {
-  number = num;
-  name = nm;
-  limit = limit;
-  balance = balance;
+  this->number = number;
+  this->name = name;
+  this->limit = limit;
+  this->balance = balance;
 }
 
 bool CreditCard::chargeIt(double price) {
-  if (price + balance < double(limit)) {
+  if (price + balance > double(limit)) {
     return false;
   }
   balance += price;

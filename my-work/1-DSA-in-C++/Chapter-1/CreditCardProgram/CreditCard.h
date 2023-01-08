@@ -6,7 +6,7 @@
 
 class CreditCard {
 public:
-  CreditCard(const std::string &num, const std::string &nm, int limit,
+  CreditCard(const std::string &number, const std::string &name, int limit,
              double balance = 0);
   std::string getNumber() const { return number; }
   std::string getName() const { return name; }
